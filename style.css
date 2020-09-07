@@ -61,8 +61,9 @@ h1 {
   font-size: 20px;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
   opacity: 1;
+  outline: none;
 }
 p {
   text-align: center;
