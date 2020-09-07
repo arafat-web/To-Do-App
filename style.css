@@ -1,5 +1,87 @@
-body{
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  box-sizing: border-box;
+  max-width: 400px;
+  background-color: teal;
+}
+
+main {
+  margin: auto;
+  max-width: 400px;
+}
+#form {
+  display: block;
+  height: 100%;
+}
+h1 {
+  text-align: center;
+  color: #ffffff;
+}
+.container {
+  padding: 16px;
+}
+.input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: dodgerblue;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-size: 15px;
+
+}
+
+.input-field:focus {
+  border: 2px solid dodgerblue;
+}
+
+.btn {
+  background-color: dodgerblue;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  font-size: 20px;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+p {
+  text-align: center;
+  color: #ffffff;
+}
+a {
+  color: chartreuse;
+  text-decoration: none;
+}
+#username, #email, #password{
+    display: flex;
+}
+#create-btn, #login-btn{
+    display: block;
+}
+#signin, #signup{
+    display: block;
+}
+hr{
     margin: auto;
-    box-sizing: border-box;
-    max-width: 400px;
+    width: 80%;
 }

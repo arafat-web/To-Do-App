@@ -5,21 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do App</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <main>
     <section id="form">
-        <form>
-            <h1 id="head"></h1>
-            <label>Name</label>
-            <input type="text" placeholder="Arafat Hossain" required>
-            <label>Email</label>
-            <input type="email" placeholder="Example@email.com" required>
-            <label>Email</label>
-            <input type="password" placeholder="123456" required>
-        </form>
+        <form class="container">
+            <h1 id="form-header"></h1>
+            <div id="username" class="input-container">
+              <i class="fa fa-user icon"></i>
+              <input class="input-field" type="text" placeholder="Username" name="usrnm">
+            </div>
+          
+            <div id="email" class="input-container">
+              <i class="fa fa-envelope icon"></i>
+              <input class="input-field" type="text" placeholder="Email" name="email">
+            </div>
+            
+            <div id="password" class="input-container">
+              <i class="fa fa-key icon"></i>
+              <input class="input-field" type="password" placeholder="Password" name="psw">
+            </div>
+          
+            <button id="create-btn" type="submit" class="btn">Create</button>
+            <button id="login-btn" type="submit" class="btn">Login</button>
+            <div id="signin">
+                <p>Already have an account? <a id="login-link" href="#">Login</a>.</p>
+            </div>
+              <div id="signup">
+                <p>New here? <a id="create-link" href="#">Create an Account</a>.</p>
+              </div>
+          </form>
     </section>
 
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
