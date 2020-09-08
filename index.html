@@ -1,44 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To Do App</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
     <main>
-    <section id="form">
+      <section id="form">
         <form class="container">
-            <h1 id="form-header"></h1>
-            <div id="username" class="input-container">
-              <i class="fa fa-user icon"></i>
-              <input class="input-field" type="text" placeholder="Username" name="usrnm">
-            </div>
-          
-            <div id="email" class="input-container">
-              <i class="fa fa-envelope icon"></i>
-              <input class="input-field" type="text" placeholder="Email" name="email">
-            </div>
-            
-            <div id="password" class="input-container">
-              <i class="fa fa-key icon"></i>
-              <input class="input-field" type="password" placeholder="Password" name="psw">
-            </div>
-          
-            <button id="create-btn" type="submit" class="btn">Create</button>
-            <button id="login-btn" type="submit" class="btn">Login</button>
-            <div id="signin">
-                <p>Already have an account? <a id="login-link" href="#">Login</a>.</p>
-            </div>
-              <div id="signup">
-                <p>New here? <a id="create-link" href="#">Create an Account</a>.</p>
-              </div>
-          </form>
-    </section>
+          <h1 id="form-header"></h1>
+          <div id="username" class="input-container">
+            <i class="fa fa-user icon"></i>
+            <input
+              class="input-field"
+              type="text"
+              placeholder="Username"
+              name="usrnm"
+              required
+            />
+          </div>
 
+          <div id="email" class="input-container">
+            <i class="fa fa-envelope icon"></i>
+            <input
+              class="input-field"
+              type="text"
+              placeholder="Email"
+              name="email"
+              required
+            />
+          </div>
+
+          <div id="password" class="input-container">
+            <i class="fa fa-key icon"></i>
+            <input
+              class="input-field"
+              type="password"
+              placeholder="Password"
+              name="psw"
+              required
+            />
+          </div>
+
+          <button id="create-btn" type="submit" class="btn">Create</button>
+          <button id="login-btn" type="submit" class="btn">Login</button>
+          <div id="signin">
+            <p>
+              Already have an account? <a id="login-link" href="#">Login</a>.
+            </p>
+          </div>
+          <div id="signup">
+            <p>New here? <a id="create-link" href="#">Create an Account</a>.</p>
+          </div>
+        </form>
+      </section>
+
+      <section id="main-header">
+        <div class="container">
+          <h2>Welcome, <span>user</span></h2>
+          <h4>Lots of work to do</h4>
+          <div class="timr-date">
+            <span id="date">date</span>
+            <span id="month">month</span>
+            <span id="year">year</span>
+            <span id="weekday">weekday</span>
+          </div>
+          <div class="logout">
+            <button id="logout-btn" class="btn">Logout</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="todo-area">
+        <div class="container">
+          <input type="text" id="todos" class="input-field"
+          placeholder="Example: Coding at 12.00 AM">
+        </div>
+      </section>
     </main>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
