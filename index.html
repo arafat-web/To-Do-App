@@ -13,66 +13,78 @@
   <body>
     <main>
       <section id="form">
-        <form class="container">
-          <h1 id="form-header"></h1>
-          <div id="username" class="input-container">
-            <i class="fa fa-user icon"></i>
-            <input
-              class="input-field"
-              type="text"
-              placeholder="Username"
-              name="usrnm"
-              required
-            />
-          </div>
+        <div class="container">
+          <form class="login-form">
+            <div class="login-form-title m-b-50">
+              <h1 id="form-header">
+                Hello There!<br />
+                Before using this you need to create an account.
+              </h1>
+            </div>
+            <div id="username" class="input-container">
+              <i class="fa fa-user icon"></i>
+              <input
+                class="input-field"
+                type="text"
+                placeholder="Username"
+                id="usrnm"
+                name="usrnm"
+                required
+              />
+            </div>
 
-          <div id="email" class="input-container">
-            <i class="fa fa-envelope icon"></i>
-            <input
-              class="input-field"
-              type="text"
-              placeholder="Email"
-              name="email"
-              required
-            />
-          </div>
+            <div id="email" class="input-container">
+              <i class="fa fa-envelope icon"></i>
+              <input
+                class="input-field"
+                type="text"
+                placeholder="Email"
+                id="mail"
+                name="email"
+                required
+              />
+            </div>
 
-          <div id="password" class="input-container">
-            <i class="fa fa-key icon"></i>
-            <input
-              class="input-field"
-              type="password"
-              placeholder="Password"
-              name="psw"
-              required
-            />
-          </div>
-
-          <button id="create-btn" type="submit" class="btn">Create</button>
-          <button id="login-btn" type="submit" class="btn">Login</button>
-          <div id="signin">
-            <p>
-              Already have an account? <a id="login-link" href="#">Login</a>.
-            </p>
-          </div>
-          <div id="signup">
-            <p>New here? <a id="create-link" href="#">Create an Account</a>.</p>
-          </div>
-        </form>
+            <div id="password" class="input-container">
+              <i class="fa fa-key icon"></i>
+              <input
+                class="input-field"
+                type="password"
+                placeholder="Password"
+                id="psw"
+                name="psw"
+                required
+              />
+            </div>
+            <div class="btns">
+              <button id="create-btn" type="submit" class="btn">Create</button>
+              <button id="login-btn" type="submit" class="btn">Login</button>
+            </div>
+            <div id="signin">
+              <p>
+                Already have an account? <a id="login-link" href="#">Login</a>.
+              </p>
+            </div>
+            <div id="signup">
+              <p>
+                New here? <a id="create-link" href="#">Create an Account</a>.
+              </p>
+            </div>
+          </form>
+        </div>
       </section>
       <section id="profile">
         <section id="main-header">
-          <div class="container">
-            <h2>Welcome, <span>user</span></h2>
-            <h4>Lots of work to do</h4>
-            <div class="timr-date">
+          <div class="login-form-title m-b-10">
+            <h2>Welcome, <span id="logname">user</span></h2>
+            <div class="time-date">
               <span id="date">date</span>
               <span id="month">month</span>
-              <span id="year">year</span>
+              <span id="year">year</span><br />
               <span id="weekday">weekday</span>
             </div>
             <div class="logout">
-              <button id="logout-btn" class="btn">Logout</button>
+              <button onclick="Logout()" id="logout-btn" class="btn">Logout</button>
             </div>
           </div>
         </section>
@@ -89,16 +101,19 @@
             </div>
           </div>
         </section>
+        <div class="container todo-container" id="todo-container">
+          
+        </div>
       </section>
     </main>
-    <script src="script.js"></script>
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
 
     <script>
       // Your web app's Firebase configuration
@@ -113,9 +128,9 @@
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
-
       const auth = firebase.auth();
-      const db = firebase.firestore();
+      const fs = firebase.firestore();
     </script>
+    <script src="script.js"></script>
   </body>
 </html>
